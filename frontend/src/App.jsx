@@ -24,7 +24,7 @@ export default function App() {
 
   async function add() {
     if (!name.trim() || !city.trim()) {
-      alert("이름/도시를 입력하세요");
+      alert("이름/도시를 입력하세요.");
       return;
     }
 
@@ -63,6 +63,10 @@ export default function App() {
 
   return (
     <Container className="py-4">
+      <div className="p-6">
+        <h1>My App</h1>
+        <p className="mt-2">CI/CD OK!!!!</p>
+      </div>
       <Row className="mb-3">
         <Col>
           <h3>사용자 관리</h3>
@@ -96,7 +100,7 @@ export default function App() {
       <Row>
         <Col>
           {loading ? (
-            <div>로딩중...</div>
+            <div>로딩 중...</div>
           ) : (
             <Table striped hover bordered>
               <thead>
